@@ -1,0 +1,15 @@
+{% extends 'Manager/manager_panel.twig' %}
+
+{% block newBlock %}
+
+<form action="/user/manager/narudzbina/{{ id }}" method="POST">
+
+    <input type="number" name="broj">
+
+    <input type="datetime-local" name="datum">
+
+    <input type="submit" value="Poruci">
+
+</form>
+
+{% endblock %}

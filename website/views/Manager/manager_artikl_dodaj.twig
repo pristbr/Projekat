@@ -1,0 +1,45 @@
+{% extends 'Manager/manager_panel.twig' %}
+
+{% block newBlock %} 
+
+    <div class="form-nov-artikl">
+
+        <form method="POST" action="/user/manager/dodaj">
+
+        <div class="artikl-proizvodjac-proizvoda">
+        <label for="proizvodjaci"> Proizvodjaci : </label>
+        <select class="form-artikl-proizvodjaci" name="proizvodjaci">
+            <option value = "Fender" selected> Fender </option>
+            <option value = "Gibson" > Gibson </option>
+            <option value = "Ibanez" > Ibanez </option>
+            <option value = "Marshall" > Marshall </option>
+            <option value = "Yamaha" > Yamaha </option>
+            <option value = "Korg" > Korg </option>
+        </select>
+        </div>
+        <div class="artikl-naziv-proizvoda">
+        <label for="naziv_proizvoda"> Ime : </label>
+        <input type="text" name="naziv_proizvoda" {% if naziv_proizvoda is not defined %} value = "{{errNaziv}}" {% endif %}>
+        </div>
+        <div class="artikl-opis-proizvoda">
+        <label for="opis_proizvoda"> Opis : </label>
+        <textarea name="opis_proizvoda" class="artikl-form-textarea" {% if opis_proizvoda is not defined %} value = "{{errOpis}}" {% endif %}> </textarea>
+        </div>
+        <div class="artikl-cena-proizvoda">
+        <label for="cena_proizvoda"> Cena : </label>
+        <input type="number" name="cena_proizvoda" {% if cena_proizvoda is not defined %} value = "{{errCena}}" {% endif %}> 
+        </div>
+        <div class="artikl-slika-proizvoda">
+        <label for="slika_proizvoda"> Slika : </label>
+        <input type="text" name="slika_proizvoda" {% if slika_proizvoda is not defined %} value = "{{errSlika}}" {% endif %}>
+        </div>
+        <div class="artikl-tip-proizvoda">
+        <label for="tip_proizvoda"> Tip : </label>
+        <input type="text" name="tip_proizvoda" {% if tip_proizvoda is not defined %} value = "{{errTip}}" {% endif %}>
+        </div>
+
+        <input type="submit" value="Dodaj">
+        </form>
+    </div>
+
+{% endblock %}

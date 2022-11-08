@@ -1,0 +1,24 @@
+{% extends 'header_login.twig' %}
+
+
+{% block pageShowProducts %}
+
+    <div class="product-page-container">
+
+        {% for item in result %}
+        
+            <h2> {{ item.proizvod_proizvodjac }} {{ item.proizvod_tip }} </h2>
+            <h3> {{ item.proizvod_ime }} </h3>
+            <h3> {{ item.proizvod_cena }}.00 rsd</h3>
+            <img src= "/website/slike/{{ item.proizvod_proizvodjac }}/{{ item.proizvod_tip }}/{{ item.proizvod_slika }}">
+            <pre> {{ item.proizvod_opis }} </pre>
+
+        <form method="post" action="/user/buy/{{ item.id }}">
+            {% if item.proizvod_in_stock == 1 %} <input type="submit" value="Kupi"> {% else %} <p> Nema na stanju </p> {% endif %}
+        </form>
+
+        {% endfor %}
+        
+    </div>
+
+{% endblock %}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+
+    <body>
+        
+        <div class="page-container">
+            <div class="nav-bar">
+                <div class="nav-bar-logo">
+                    <a href="/user/load/admin"> Admin Login </a>
+                    <a href="/user/load/menadzer"> Menadzer Login </a>
+                </div>
+
+                <div class="nav-bar-links">
+
+                    <a href="/user/load/registerpage" class="a-border-special a-login"> Register </a>
+                    
+                </div>
+            </div>
+            <div class="page-form-login">
+            <div class="horizontal_line"></div>
+                <form method="post" action="/user/login" class="page-form-input-login-korisnik">
+                
+                    <h1> Ulogujte se kao korisnik </h1>
+                    <div class="user_email_block">
+                        <label for="email"> E-mail : </label>
+                        <input type="text" name="email" placeholder="peraperic@nekimejl.com" {% if email is not defined %} value = "{{ errEmail }}" {% endif %}>
+                    </div>
+                    <div class="user_password_block">
+                        <label for="korisnik_password"> Sifra : </label>
+                        <input type="password" name="korisnik_password">
+                        
+                    </div>
+                    <span class="input-failed"> {{ errPassword }} </span>
+                    <input type="submit" value="Log In">
+                    
+                </form>
+                <div class="horizontal_line"></div>
+                
+            </div>
+        </div>
+
+    </body>
+
+
+</html>

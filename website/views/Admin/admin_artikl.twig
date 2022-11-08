@@ -1,0 +1,18 @@
+{% extends 'Admin/admin_panel.twig' %}
+
+{% block newBlock %} 
+
+  <div class="product-page-products">
+
+
+            {% for item in result %}
+            {% if item.proizvod_ime != 'izbrisano' %}
+  <div class="product-page-single-product">
+            <a href="/user/admin/{{ item.proizvod_proizvodjac }}/{{item.proizvod_tip}}/{{ item.id }}/change"> {{ item.proizvod_ime }} <img src="/website/slike/{{ item.proizvod_proizvodjac }}/{{item.proizvod_tip}}/{{ item.proizvod_slika }}"> </a>
+            </div>
+            {% endif %}
+            {% endfor %}
+
+</div>
+
+{% endblock %}

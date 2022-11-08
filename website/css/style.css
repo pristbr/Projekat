@@ -1,0 +1,595 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    content: "";
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: #333333;
+}
+/* OVO JE ZA KORISNIKA CSS DEO*/
+.page-container-korisnik {
+    height: 100vh;
+    width: 100%;
+    background-color: #badfe7;
+   
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid white;
+    background-color: #388087;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: white;
+    padding: 16px;
+    transition: 0.5s;
+}
+
+.a-border-normal {
+    border-radius: 10px;
+}
+
+.a-border-special {
+    border-radius: 25px;
+}
+
+.nav-bar-logo {
+    width: 40%;
+    font-size: 32px;
+    text-shadow: black 2px 2px;
+}
+
+.nav-bar-links {
+    width: 60%;
+    text-align: right;
+    font-size: 24px;
+}
+
+.nav-bar-links a {
+    border: 2px solid white;
+    padding: 8px 16px;
+    margin: 0px 12px;
+}
+
+.a-login {
+    color: black;
+}
+
+.nav-bar-links, .nav-bar-logo {
+    padding: 24px 8px;
+    margin: 0px 16px 0px 0px;
+}
+
+.nav-bar a:hover {
+    background-color: none;
+    color : black;
+    transition: 0.5s;
+}
+
+.page-form-register {
+    position: absolute;
+    width: 40%;
+    height: 80vh;
+    background-color: #f6f6f2;
+    box-shadow: 2px 2px 8px 4px #388087;
+    left: 30%;
+    top: 10%;
+}
+
+.page-form-login {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 40vh;
+    background-color: #f6f6f2;
+    box-shadow: 2px 2px 8px 4px #388087;
+    left: 25%;
+    top: 30%;
+}
+
+.page-form-input-register {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+  
+}
+
+.page-form-input-login-korisnik {
+    width: 80%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+
+}
+
+.page-form-input-login-korisnik h1 {
+    color: #333;
+    padding: 24px;
+    margin: 16px auto;
+}
+
+.page-form-input-login-korisnik label {
+    color: #333333;
+    margin: 16px;
+    font-size: 32px;
+}
+
+.span-failed-input-register {
+    font-size: 30px;
+    color: red;
+}
+
+.horizontal_line {
+    border: 2px solid #388087;
+    height: 50vh;
+    margin: auto 0px;
+    border-radius: 25px;
+}
+
+.page-form-login .horizontal_line {
+    height: 25vh;
+}
+
+.page-form-input-register label {
+    color: #333333;
+    margin: 16px;
+    font-size: 32px;
+}
+
+.user_name_block,
+.user_surname_block, 
+.user_grad_block, 
+.user_telefon_block, 
+.user_dob_block, 
+.user_adresa_block, 
+.user_zip_block,
+.user_email_block,
+.user_password_block,
+.user_retype_password_block {
+    padding: 8px;
+    width: 100%;
+    text-align: left;
+}
+
+input {
+    width: 60%;
+    font-size: 24px;
+    float: right;
+    padding: 4px;
+}
+
+.input-failed {
+    color : red;
+}
+
+
+input[type='submit'] {
+    align-self: center;
+    width: 25%;
+    background-color: #badfe7;
+    border: none;
+    padding: 16px 8px;
+    margin: 16px 32px;
+    cursor: pointer;
+}
+
+.admin_mod_panel a {
+    color: white;
+    text-decoration: none;
+    padding: 16px 8px;
+    margin: 16px 0px;
+    background-color: lightblue;
+    width: 40%;
+    text-align: center
+}
+
+
+.admin_mod_panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 40%;
+    height: 40vh;
+}
+
+
+/*ADMIN CSS*/
+
+.page-container-admin {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.nav-bar-admin {
+    display: flex;
+    height: 15vh;
+    width: 100%;
+    background-color: #333333;
+    border-bottom: 2px solid white;
+    align-items: center;
+    align-content: center;
+}
+
+.nav-bar-admin a {
+    color: #2DA8D8;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 16px;
+    margin: 0px 16px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+.admin-delete-manager-card {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 20vh;
+    padding: 16px;
+    margin: 24px;
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 4px 2px;
+}
+
+.admin-delete-manager-card h2, .admin-delete-manager-card h3 {
+    padding: 6px;
+}
+
+.admin-delete-manager-card a {
+    padding: 12px;
+    font-size: 24px;
+    background-color: #333;
+    color: white;
+    border-radius: 25px;
+}
+
+.page-form-register-admin {
+    position: absolute;
+    width: 40%;
+    height: 80vh;
+    background-color: #f6f6f2;
+    box-shadow: 2px 2px 8px 4px #388087;
+    left: 30%;
+    top: 17.5%;
+}
+
+.admin-show-user-card{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 15vh;
+    padding: 16px;
+    margin: 24px;
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 4px 2px;
+}
+
+.form-nov-artikl {
+    display: flex;
+    position: absolute;
+    width: 40%;
+    height: 80vh;
+    background-color: #f6f6f2;
+    box-shadow: 2px 2px 8px 4px #388087;
+    left: 30%;
+    top: 17.5%;
+}
+
+.form-nov-artikl form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 8px;
+}
+.form-nov-artikl label {
+    font-size: 24px;
+    margin: 16px 0px;
+}
+.form-nov-artikl input, .form-nov-artikl select, .form-nov-artikl textarea {
+    float: right;
+}
+
+.form-nov-artikl textarea{
+    width: 600px;
+    height: 400px;
+    max-width: 600px;
+    max-height: 400px;
+}
+
+.artikl-in-stock-proizvoda {
+    display: flex;
+    width: 25%;
+    height: 3vh;
+} 
+
+.artikl-in-stock-proizvoda label {
+    font-size: 20px;
+} 
+
+.artikl-in-stock-proizvoda input {
+    width: 25%;
+}
+
+
+.artikl-naziv-proizvoda input,
+.artikl-proizvodjac-proizvoda select,
+.artikl-cena-proizvoda input,
+.artikl-slika-proizvoda input,
+.artikl-tip-proizvoda input{
+    display: flex;
+    width: 60%;
+    margin: 4px 0px 4px auto;
+    font-size: 24px;
+}
+
+.admin-korisnik-info {
+    display: flex;
+    width: 80%;
+    height: 85vh;
+    margin: 0 auto;
+}
+
+.korisnik-info {
+    display: flex;
+    width: 30%;
+    height: 85vh;
+    flex-direction: column;
+    border: 2px solid white;
+}
+
+.korisnik-info h1 {
+    font-size: 30px;
+    margin: 8px 0px;
+    padding: 8px 0px;
+}
+
+/*ADMIN CSS*/
+
+/*GLAVNA STRANICA CSS*/
+
+.page-container-main-page {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.nav-bar-main-page {
+    display: flex;
+    height: 15vh;
+    width: 100%;
+    flex-direction: column;
+}
+
+.main-page-info, .main-page-links {
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid white;
+}
+
+.main-page-info {
+    height: 10vh;
+    background-color: #388087;
+}
+
+.main-page-links {
+    height: 5vh;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #badfe7;
+
+}
+
+.main-page-links a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #333333;
+    padding: 16px;
+}
+
+.main-page-view {
+    display: flex;
+    height: 85vh;
+    width: 100%;
+}
+
+.main-page-products {
+    display: flex;
+    flex-direction: row;
+    height: 85vh;
+    width: 100%;
+}
+
+.main-page-products h1 {
+    font-size: 20px;
+}
+
+.main-page-products-guitar,
+.main-page-products-guitar-amps,
+.main-page-products-bass-guitar,
+.main-page-products-bass-guitar-amps,
+.main-page-products-drums,
+.main-page-products-keyboards,
+.main-page-products-acoustic-guitars {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    height: 85vh;
+    width: 14.3%;
+    background-color: #f6f6f2;
+}
+
+.main-page-products-guitar a,
+.main-page-products-guitar-amps a,
+.main-page-products-bass-guitar a,
+.main-page-products-bass-guitar-amps a,
+.main-page-products-drums a,
+.main-page-products-keyboards a,
+.main-page-products-acoustic-guitars a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    margin: 8px auto;
+    width: 75%;
+    font-size: 24px;
+    color: #333333;
+    border: 2px solid #388087;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px 2px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.main-page-products-guitar a:hover,
+.main-page-products-guitar-amps a:hover,
+.main-page-products-bass-guitar a:hover,
+.main-page-products-bass-guitar-amps a:hover,
+.main-page-products-drums a:hover,
+.main-page-products-keyboards a:hover,
+.main-page-products-acoustic-guitars a:hover {
+    box-shadow: 4px 2px 8px 2px;
+    transition: 0.2s;
+}
+.main-page-horizontal-line {
+    border: 2px solid #388087;
+    height: 45vh;
+    margin: auto 0px;
+    border-radius: 25px;
+}
+
+a img {
+    height: 175px;
+    width: 125px;
+    object-fit: cover;
+}
+
+/*GLAVNA STRANICA CSS*/
+
+/*PRODUCT STRANICA CSS*/
+
+.product-page-products {
+    display: flex;
+    height: 85vh;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.product-page-single-product {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    height: 35vh;
+    width: 20%;
+    margin: 16px;
+}
+
+.product-page-products a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    margin: 8px 16px;
+    width: 75%;
+    font-size: 24px;
+    color: #333333;
+    border: 2px solid #388087;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px 2px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.product-page-single-product img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+/*PRODUCT STRANICA CSS*/
+
+/*PRIKAZ PRODUCT CSS*/
+.product-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    margin: 0px auto;
+    border-right: 2px solid #388087;
+    border-left: 2px solid #388087;
+    padding: 16px;
+}
+
+.product-page-container img {
+    width: 600px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.product-page-container pre {
+    display: flex;
+    font-size: 20px;
+}
+
+.product-page-container input[type='submit'] {
+    font-size: 32px;
+    padding: 16px;
+    width: 100%;
+}
+
+/*PRIKAZ PRODUCT CSS*/
+
+/* MANAGER CSS*/
+
+.page-container-manager {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.nav-bar-manager {
+    display: flex;
+    height: 15vh;
+    width: 100%;
+    background-color: #333333;
+    border-bottom: 2px solid white;
+    align-items: center;
+    align-content: center;
+}
+
+.nav-bar-manager a {
+    color: #2DA8D8;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 16px;
+    margin: 0px 16px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+/* MANAGER CSS*/

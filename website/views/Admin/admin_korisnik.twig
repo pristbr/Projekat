@@ -1,0 +1,55 @@
+{% extends 'Admin/admin_panel.twig' %}
+
+{% block newBlock %} 
+
+       <div class="admin-korisnik-info">
+
+        <div class="korisnik-info">
+
+        <h1> Informacije o korisniku </h1>
+        <h1> Ime : {{ korisnik.korisnik_ime }} </h1>
+        <h1> Prezime : {{ korisnik.korisnik_prezime }} </h1>
+        <h1> Telefon : {{ korisnik.korisnik_telefon }} </h1>
+        <h1> Grad : {{ korisnik.korisnik_grad }} </h1>
+        <h1> Adresa : {{ korisnik.korisnik_adresa }} </h1>
+        <h1> Zip : {{ korisnik.korisnik_zip }} </h1>
+        <h1> Email : {{ nalog.nalog_email }} </h1>
+
+        <a href="/export/to/excel/{{ nalog.id }}"> Excel </a>
+        <a href="/export/to/pdf/{{ nalog.id }}"> PDF </a>
+        </div>
+
+        <div class="korisnik-info-istorija-kupovine">
+
+            <table border = 1>
+                <thead>
+                        <th> Ime proizvoda </th>
+                        <th> Cena proizvoda </th>
+                        <th> Tip proizvoda </th>
+                        <th> Broj narudzbine </th>
+                        <th> Datum narudzbine </th>
+                        <th> Datum slanja </th>
+                </thead>
+              <tbody>
+              {% for product in narudzbina %}
+              {% if product.proizvod_ime != "" %}
+              <tr>
+                <td> {{ product.proizvod_ime }} </td>
+                <td> {{ product.proizvod_cena }} </td>
+                <td> {{ product.proizvod_tip }} </td>
+                {% if product.narudzbina_broj != 0 %} <td> {{ product.narudzbina_broj }} </td> {% else %} <td> <a href="/user/manager/potvrdinarudzbinu/{{ product.narudzbina_id }}"> Potvrdi </a> </td> {% endif %}
+                <td> {{ product.narudzbina_datum }} </td>
+                <td> {{ product.narudzbina_datum_slanja }} </td>
+              </tr>
+              {% endif %}
+             {% endfor %}
+            
+            </tbody>
+            </table>
+
+        </div>
+    </div>
+
+       
+
+{% endblock %}

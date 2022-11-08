@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+
+
+    <body>
+
+        <div class="page-container-main-page">
+
+            <div class="nav-bar-main-page">
+
+                <div class="main-page-info">
+                    <a href="/"> Gain&Volume </a>
+                </div>
+
+                <div class="main-page-links">
+                    {% block login %}<a href="/user/load/loginpage"> Log In </a> {% endblock %}
+                    <a href="/user/load/registerpage"> Register </a>
+                </div>
+
+            </div>
+
+            {% block pageShowProducts %}{% endblock %}
+
+        </div>
+
+    </body>
+
+
+</html>

@@ -1,0 +1,18 @@
+{% extends 'header_no_login.twig' %}
+
+{% block pageShowProducts %}
+
+    <div class="product-page-products">
+
+        <div class="product-page-single-product">
+
+            {% for item in result %}
+            {% if item.proizvod_ime != 'izbrisano' or item.proizvod_ime != "" %}
+            <a href="/product/{{ item.proizvod_proizvodjac }}/{{item.proizvod_tip}}/{{ item.id }}"> {{ item.proizvod_ime }} <img src="/website/slike/{{ item.proizvod_proizvodjac }}/{{ item.proizvod_tip }}/{{ item.proizvod_slika }}"> </a>
+            {% endif %}
+            {% endfor %}
+
+        </div>
+
+    </div>
+{% endblock %}

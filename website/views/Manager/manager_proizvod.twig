@@ -1,0 +1,51 @@
+{% extends 'Manager/manager_panel.twig' %}
+
+{% block newBlock %} 
+
+  <div class="form-nov-artikl">
+
+    {% for item in result %}
+
+    <form method="POST" action="/user/manager/promeni/{{item.id}}">
+
+        <div class="artikl-proizvodjac-proizvoda">
+        <label for="proizvodjaci"> Proizvodjaci : </label>
+        <select class="form-artikl-proizvodjaci" name="proizvodjaci">
+            <option value = "Fender" {% if item.proizvod_proizvodjac == "Fender" %} selected {% endif %}> Fender </option>
+            <option value = "Gibson" {% if item.proizvod_proizvodjac == "Gibson" %} selected {% endif %}> Gibson </option>
+            <option value = "Ibanez" {% if item.proizvod_proizvodjac == "Ibanez" %} selected {% endif %}> Ibanez </option>
+            <option value = "Marshall" {% if item.proizvod_proizvodjac == "Marshall" %} selected {% endif %}> Marshall </option>
+            <option value = "Yamaha" {% if item.proizvod_proizvodjac == "Yamaha" %} selected {% endif %}> Yamaha </option>
+            <option value = "Korg" {% if item.proizvod_proizvodjac == "Korg" %} selected {% endif %}> Korg </option>
+        </select>
+        </div>
+        <div class="artikl-naziv-proizvoda">
+        <label for="naziv_proizvoda"> Ime : </label>
+        <input type="text" name="naziv_proizvoda" value="{{item.proizvod_ime}}">
+        </div>
+        <div class="artikl-opis-proizvoda">
+        <label for="opis_proizvoda"> Opis : </label>
+        <textarea name="opis_proizvoda" class="artikl-form-textarea" value="{{item.proizvod_opis}}"> {{item.proizvod_opis}} </textarea>
+        </div>
+        <div class="artikl-cena-proizvoda">
+        <label for="cena_proizvoda"> Cena : </label>
+        <input type="number" name="cena_proizvoda" value="{{item.proizvod_cena}}"> 
+        </div>
+        <div class="artikl-slika-proizvoda">
+        <label for="slika_proizvoda"> Slika : </label>
+        <input type="text" name="slika_proizvoda" value="{{item.proizvod_slika}}">
+        </div>
+        <div class="artikl-tip-proizvoda">
+        <label for="tip_proizvoda"> Tip : </label>
+        <input type="text" name="tip_proizvoda" value="{{item.proizvod_tip}}">
+        </div>
+        <div class="artikl-in-stock-proizvoda">
+            <label for="in-stock"> In Stock : 
+            <input type="checkbox" name="in-stock" value= "1"checked>
+        </div>
+        <input type="submit" value="Promeni">
+        </form>
+
+    {% endfor %}
+</div>
+{% endblock %}

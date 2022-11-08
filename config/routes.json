@@ -1,0 +1,232 @@
+{
+    "user/load/loginpage" : {
+        "controller" : "User",
+        "method" : "showLoginPage"
+    },
+    "user/load/registerpage" : {
+        "controller" : "User",
+        "method" : "showRegisterPage"
+    },
+    "user/register" : {
+        "controller" : "User",
+        "method" : "register"
+    },
+    "user/login" : {
+        "controller" : "User",
+        "method" : "login"
+    },
+    "user/logout" : {
+        "controller" : "User",
+        "method" : "logout"
+    },
+    "user/load/admin" : {
+        "controller" : "User",
+        "method" : "showAdminLogin"
+    },
+    "user/load/menadzer" : {
+        "controller" : "User",
+        "method" : "showMenadzerLogin"
+    },
+    "user/admin/loginadmin" : {
+        "controller" : "Admin",
+        "method" : "loginAdmin"
+    },
+    "user/admin/adminpanel" : {
+        "controller" : "Admin",
+        "method" : "showAdminPanel"
+    },
+    "/user/prikazikorisnika/:id" : {
+        "controller" : "User",
+        "pregledaj" : "mojProfil",
+        "params" : {
+            "id" : "number"
+        }
+    },
+    "product/show/:proizvodjac/:tip" : {
+        "controller" : "Product",
+        "method" : "showProducts",
+        "params" : {
+            "proizvodjac" : "string",
+            "tip" : "string"
+        }
+    }, 
+    "user/load/mainpage" : {
+        "controller" : "User",
+        "method" : "load_logged_in"
+    },
+    "product/:proizvodjac/:tip/:id" : {
+        "controller" : "Product",
+        "method" : "showProduct",
+        "params" : {
+            "proizvodjac" : "string",
+            "id" : "number",
+            "tip" : "string"
+        }
+    },
+    "user/buy/:id" : {
+        "controller" : "Product",
+        "method" : "buy",
+        "params" : {
+            "id" : "number"
+        }
+    },
+    "user/admin/dodajmenadzer" : {
+        "controller" : "Admin",
+        "method" : "addManager"
+    },
+    "user/admin/register/menadzer" : {
+        "controller" : "Admin",
+        "method" : "registerManager"
+    },
+    "user/admin/izbrisimenadzer" : {
+        "controller" : "Admin",
+        "method" : "deleteManager"
+    },
+    "user/admin/delete/:id" : {
+        "controller" : "Admin",
+        "method" : "managerDelete",
+        "params" : {
+            "id" : "number"
+        }
+    },
+    "user/admin/dodajartikl" : {
+        "controller" : "Admin",
+        "method" : "dodajArtikl"
+    },
+    "user/admin/dodaj" : {
+        "controller" : "Admin",
+        "method" : "artiklDodaj"
+    },
+    "user/admin/izmeniartikl" : {
+        "controller" : "Admin",
+        "method" : "izmeniArtikl"
+    },
+    "user/admin/:proizvodjac/:tip/:id/change" : {
+        "controller" : "Admin",
+        "method" : "artiklIzmeni",
+        "params" : {
+            "proizvodjac" : "string",
+            "id" : "number",
+            "tip" : "string"
+        }
+    },
+    "user/admin/promeni/:id" : {
+        "controller" : "Admin",
+        "method" : "promeni",
+        "params" : {
+            "id" : "number"
+        }
+    },
+    "user/admin/izbrisiartikl" : {
+        "controller" : "Admin",
+        "method" : "ibrisiArtikl"
+    },
+    "user/admin/:proizvodjac/:tip/:id/delete" : {
+        "controller" : "Admin",
+        "method" : "artiklIzbrisi",
+        "params" : {
+            "proizvodjac" : "string",
+            "id" : "number",
+            "tip" : "string"
+        }
+    },
+    "user/admin/prikazikorisnici" : {
+        "controller" : "Admin",
+        "method" : "sviKorisnici"
+    },
+    "user/admin/prikazikorisnika/:id" : {
+        "controller" : "Admin",
+        "method" : "korisnikProfil",
+        "params" : {
+            "id" : "number"
+        }
+    },
+    "export/to/excel/:id" : {
+        "controller" : "Admin", 
+        "method" : "exportExcel",
+        "params" : {
+            "id" : "number"
+        }
+    },
+    "export/to/pdf/:id" : {
+        "controller" : "Admin", 
+        "method" : "exportPDF",
+        "params" : {
+            "id" : "number"
+        }
+    },
+    "user/manager/login" : {
+        "controller" : "Manager",
+        "method" : "loginManager"
+    },
+    "user/manager/managerpanel" : {
+        "controller" : "Manager",
+        "method" : "showManagerPanel"
+    },
+    "user/manager/dodajartikl" : {
+        "controller" : "Manager",
+        "method" : "dodajArtikl"
+    },
+    "user/manager/dodaj" : {
+        "controller" : "Manager",
+        "method" : "artiklDodaj"
+    },
+    "user/manager/izmeniartikl" : {
+        "controller" : "Manager",
+        "method" : "izmeniArtikl"
+    },
+    "user/manager/:proizvodjac/:tip/:id/change" : {
+        "controller" : "Manager",
+        "method" : "artiklIzmeni",
+        "params" : {
+            "proizvodjac" : "string",
+            "id" : "number",
+            "tip" : "string"
+        }
+    },
+    "user/manager/promeni/:id" : {
+        "controller" : "Manager",
+        "method" : "promeni",
+        "params" : {
+            "id" : "number"
+        }
+    },
+    "user/manager/izbrisiartikl" : {
+        "controller" : "Manager",
+        "method" : "ibrisiArtikl"
+    },
+    "user/manager/:proizvodjac/:tip/:id/delete" : {
+        "controller" : "Manager",
+        "method" : "artiklIzbrisi",
+        "params" : {
+            "proizvodjac" : "string",
+            "id" : "number",
+            "tip" : "string"
+        }
+    },
+    "user/manager/prikazikorisnici" : {
+        "controller" : "Manager",
+        "method" : "sviKorisnici"
+    },
+    "user/manager/prikazikorisnika/:id" : {
+        "controller" : "Manager",
+        "method" : "korisnikProfil",
+        "params" : {
+            "id" : "number"
+        }
+    },
+    "user/manager/potvrdinarudzbinu/:id" : {
+        "controller" : "Manager", 
+        "method" : "potvrdiorder",
+        "params" : {
+            "id" : "number"
+        }
+    },
+    "user/manager/narudzbina/:id" : {
+        "controller" : "Manager",
+        "method" : "potvrdi",
+        "params" : {
+            "id" : "number"
+        }
+    }
+}

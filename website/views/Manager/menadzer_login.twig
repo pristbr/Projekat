@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+
+    <body>
+        
+        <div class="page-container">
+            
+            </div>
+            <div class="page-form-login">
+            <div class="horizontal_line"></div>
+                <form method="post" action="/user/manager/login" class="page-form-input-login-korisnik">
+                
+                    <h1> Ulogujte se kao menadzer </h1>
+                    <div class="user_email_block">
+                        <label for="email"> E-mail : </label>
+                        <input type="text" name="email" {% if email is not defined %} value = "{{ errEmail }}" {% endif %}>
+                    </div>
+                    <div class="user_password_block">
+                        <label for="korisnik_password"> Sifra : </label>
+                        <input type="password" name="korisnik_password">
+                        
+                    </div>
+                    <span class="input-failed"> {{ errPassword }} </span>
+                    <input type="submit" value="Log In">
+                    
+                </form>
+                <div class="horizontal_line"></div>
+                
+            </div>
+        </div>
+
+    </body>
+
+
+</html>

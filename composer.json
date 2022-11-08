@@ -1,0 +1,13 @@
+{
+    "autoload": {
+        "psr-4": {
+            "MuzickaProdavnica\\" : "src"
+        }
+    },
+    "require": {
+        "twig/twig": "^3.3",
+        "monolog/monolog": "^2.3",
+        "twbs/bootstrap": "5.1.3",
+        "tecnickcom/tcpdf": "^6.4"
+    }
+}

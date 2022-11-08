@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title> {{ pageTitle }} </title>
+    </head>
+
+    <body>
+
+        <div class="page-container-korisnik">
+            <div class="nav-bar">
+                <div class="nav-bar-logo">
+                    
+                </div>
+
+                <div class="nav-bar-links">
+                    <a href="/user/load/loginpage" class="a-border-special a-login"> Log In </a>
+                </div>
+            </div>
+            <div class="page-form-register">
+                <form method="post" action="/user/register" class="page-form-input-register">
+                    <div class="user_name_block">
+                        <label for="name"> Ime : </label>
+                        <input type="text" name="name" placeholder="npr. Pera" {% if name is not defined %} value = "{{errName}}" class="input-failed" {% endif %}>
+                    </div>
+                    <div class="user_surname_block">
+                        <label for="surname"> Prezime : </label>
+                        <input type="text" name="surname" placeholder="npr. Peric" {% if surname is not defined %} value = "{{ errSurname }}" class="input-failed" {% endif %}>
+                    </div>
+                    <div class="user_telefon_block">
+                        <label for="telefon"> Telefon : </label>
+                        <input type="text" name="telefon"  placeholder="npr. 0605983445" {% if telefon is not defined %} value = "{{ errTelefon }}" class="input-failed" {% endif %}>
+                    </div>
+                    <div class="user_grad_block">
+                        <label for="grad"> Grad : </label>
+                        <input type="text" name="grad" placeholder="npr. Nis" {% if grad is not defined %} value = "{{ errGrad }}" class="input-failed" {% endif %}>
+                    </div>
+                    <div class="user_dob_block">
+                        <label for="dob"> Datum rodjenja : </label>
+                        <input type="date" name="dob">
+                    </div>
+                    <div class="user_adresa_block">
+                        <label for="adresa"> Adresa : </label>
+                        <input type="text" name="adresa" placeholder="npr. Bulevar Pasic bb" {% if adresa is not defined %} value = "{{ errAdresa }}" class="input-failed" {% endif %}>
+                    </div>
+                    <div class="user_zip_block">
+                        <label for="zip"> Zip Code : </label>
+                        <input type="text" name="zip"  placeholder="npr. 11000" {% if zip is not defined %} value = "{{ errZip }}" class="input-failed" {% endif %}>
+                    </div>
+                    <div class="user_email_block">
+                        <label for="email"> E-mail : </label>
+                        <input type="text" name="email" placeholder="peraperic@nekimejl.com" {% if email is not defined %} value = "{{ errEmail }}" class="input-failed" {% endif %}>
+                    </div>
+                    <div class="user_password_block">
+                        <label for="korisnik_password"> Sifra : </label>
+                        <input type="password" name="korisnik_password">
+                    </div>
+                    <div class="user_retype_password_block">
+                        <label for="korisnik_retype_password"> Ponovite sifru : </label>
+                        <input type="password" name="korisnik_retype_password">
+                    </div>
+                    <span class="input-failed"> Sifra : {{ errPassword }} </span>
+                    <span class="input-failed"> Ponoviti sifru : {{ errRetypePassword }} </span>
+                    <input type="submit" value="Register">
+                    
+
+                </form>
+            </div>
+        </div>
+
+    </body>
+
+
+ </html>

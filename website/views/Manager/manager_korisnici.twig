@@ -1,0 +1,17 @@
+{% extends 'Manager/manager_panel.twig' %}
+
+{% block newBlock %} 
+ {% for item in result %}
+
+
+            {% if item.nalog_korisnik_tip_id == 3 %}
+            <div class="admin-show-user-card">
+            Korisnik : 
+            <h2> Ime : {{ item.korisnik_ime }}</h2>
+            <h3> Prezime : {{ item.korisnik_prezime }} </h3>
+            <a href="/user/manager/prikazikorisnika/{{ item.id }}"> Pregledaj </a>
+            </div>
+            {% endif %}
+     {% endfor %}
+
+{% endblock %}

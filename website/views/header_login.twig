@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+
+    <body>
+
+        <div class="page-container-main-page">
+
+            <div class="nav-bar-main-page">
+
+                <div class="main-page-info">
+                    <a href="/user/load/mainpage"> Gain&Volume </a>
+                </div>
+
+                <div class="main-page-links">
+                    {% block korisnik_ime %} {{ imeKorisnik }} {% endblock %}
+                    <a href="/user/logout"> Log Out </a>
+                </div>
+
+            </div>
+
+            {% block pageShowProducts %}{% endblock %}
+
+        </div>
+
+    </body>
+
+
+</html>
